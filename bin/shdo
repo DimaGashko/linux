@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ $(ssh-add -L) != *$(cat ~/.ssh/id_rsa.pub) ]]; then
+  ssh-add -q -t 5m
+fi
+
+eval "$@"
