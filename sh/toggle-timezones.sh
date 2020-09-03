@@ -9,4 +9,4 @@ else
    newTz=$tz1
 fi
 
-timedatectl set-timezone $newTz
+timedatectl --no-ask-password set-timezone $newTz
