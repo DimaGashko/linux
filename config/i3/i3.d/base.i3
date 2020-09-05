@@ -9,8 +9,8 @@ font pango:unifont 10
 
 floating_modifier $mod
 
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+r restart
-
 # Do not activate window on a title bar click 
 bindsym button1 nop
+
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
