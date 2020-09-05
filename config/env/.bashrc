@@ -1,7 +1,3 @@
-#
-# /etc/bash.bashrc
-#
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -21,11 +17,12 @@ esac
 
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
 
+export PATH=$PATH:/usr/share/ptools/john/run
 
-alias john=~/make/john/run/john
+export john=/usr/share/ptools/john/run
+
+export EDITOR='vim'
+export VISUAL='vim'
 
 neofetch
-
-
-
 
