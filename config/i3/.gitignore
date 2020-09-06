@@ -1,2 +1,3 @@
 i3.config
 *.gen.i3
+.active-ws-group

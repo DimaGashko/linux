@@ -7,6 +7,7 @@ wsGroup=$1
 
 if [ ! -z $wsGroup ]; then
    sh/gen-ws-bindings.sh $wsGroup > i3.d/_workspaces.gen.i3
+   echo $(($wsGroup + 1)) > .active-ws-group
 fi
 
 for f in $(find i3.d/*)
