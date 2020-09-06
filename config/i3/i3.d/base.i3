@@ -26,3 +26,5 @@ bindsym Mod1+7 exec $gen 6 && i3-msg reload
 bindsym Mod1+8 exec $gen 7 && i3-msg reload
 bindsym Mod1+9 exec $gen 8 && i3-msg reload
 bindsym Mod1+0 exec $gen 9 && i3-msg reload
+bindsym Mod1+minus exec $gen 10 && i3-msg reload
+bindsym Mod1+plus exec $gen 11 && i3-msg reload

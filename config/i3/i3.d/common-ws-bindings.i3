@@ -1,5 +1,5 @@
-set $wsa "101"
-set $wsb "102"
+set $wsa "121"
+set $wsb "122"
 
 bindsym $mod+minus workspace $wsa
 bindsym $mod+plus workspace $wsb
