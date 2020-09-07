@@ -1,4 +1,5 @@
 set $mod Mod4
+
 set $gen ~/config/i3/gen-i3.sh
 
 # TODO: low battery notification
@@ -16,6 +17,7 @@ bindsym button1 nop
 bindsym $mod+Shift+c exec $gen && i3-msg reload
 bindsym $mod+Shift+r exec $gen && i3-msg restart
 
+# Just 12 groups of workspaces with 10 workspaces on each one
 bindsym Mod1+1 exec $gen 0 && i3-msg reload
 bindsym Mod1+2 exec $gen 1 && i3-msg reload
 bindsym Mod1+3 exec $gen 2 && i3-msg reload
@@ -28,3 +30,19 @@ bindsym Mod1+9 exec $gen 8 && i3-msg reload
 bindsym Mod1+0 exec $gen 9 && i3-msg reload
 bindsym Mod1+minus exec $gen 10 && i3-msg reload
 bindsym Mod1+plus exec $gen 11 && i3-msg reload
+
+# Plus some common workspaces
+bindsym $mod+minus workspace "121"
+bindsym $mod+plus workspace "122"
+bindsym $mod+BackSpace workspace "123"
+bindsym $mod+Home workspace "124"
+
+bindsym $mod+Shift+minus move container to workspace "121"
+bindsym $mod+Shift+plus move container to workspace "122"
+bindsym $mod+Shift+BackSpace move container to workspace "123"
+bindsym $mod+Shift+Home move container to workspace "124"
+
+bindsym $mod+Ctrl+minus move container to workspace number "121"; workspace "121"
+bindsym $mod+Ctrl+plus move container to workspace number "122"; workspace "122"
+bindsym $mod+Ctrl+BackSpace move container to workspace number "122"; workspace "123"
+bindsym $mod+Ctrl+Home move container to workspace number "122"; workspace "124"
