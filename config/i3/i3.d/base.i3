@@ -32,17 +32,19 @@ bindsym Mod1+minus exec $gen 10 && i3-msg reload
 bindsym Mod1+plus exec $gen 11 && i3-msg reload
 
 # Plus some common workspaces
-bindsym $mod+minus workspace "121"
+bindsym $mod+grave workspace "0"
 bindsym $mod+plus workspace "122"
 bindsym $mod+BackSpace workspace "123"
 bindsym $mod+Home workspace "124"
 
+bindsym $mod+Shift+grave move container to workspace "0"
 bindsym $mod+Shift+minus move container to workspace "121"
 bindsym $mod+Shift+plus move container to workspace "122"
 bindsym $mod+Shift+BackSpace move container to workspace "123"
 bindsym $mod+Shift+Home move container to workspace "124"
 
+bindsym $mod+Ctrl+grave move container to workspace number "0; workspace "0"
 bindsym $mod+Ctrl+minus move container to workspace number "121"; workspace "121"
 bindsym $mod+Ctrl+plus move container to workspace number "122"; workspace "122"
-bindsym $mod+Ctrl+BackSpace move container to workspace number "122"; workspace "123"
-bindsym $mod+Ctrl+Home move container to workspace number "122"; workspace "124"
+bindsym $mod+Ctrl+BackSpace move container to workspace number "123"; workspace "123"
+bindsym $mod+Ctrl+Home move container to workspace number "124"; workspace "124"
