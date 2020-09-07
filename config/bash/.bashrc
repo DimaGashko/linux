@@ -1,0 +1,36 @@
+[[ $- != *i* ]] && return
+
+source /usr/share/doc/pkgfile/command-not-found.bash
+
+parseGitBranch() {
+  git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+formatGitBranch() {
+  branch=$(parseGitBranch)
+  if [ "$branch" == "(master)" ]; then
+    echo "(MASTER)"
+  else
+    echo $branch
+  fi
+}
+
+PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w \[\e[91m\]\$(formatGitBranch)\[\e[00m\]$ "
+
+shopt -s checkwinsize
+shopt -s histappend
+shopt -s globstar
+shopt -s autocd
+
+HISTCONTROL=ignoreboth
+HISTFILESIZE=10000
+HISTSIZE=1000
+
+alias grep='grep --color=auto'
+alias ls='ls --color=auto'
+alias ll='ls -la'
+
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export john=/usr/share/ptools/john/run
+
+neofetch
