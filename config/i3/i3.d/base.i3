@@ -1,5 +1,8 @@
 set $mod Mod4
 
+set $exec exec --no-startup-id
+set $exec_always exec_always --no-startup-id
+
 set $gen ~/config/i3/gen-i3.sh
 
 # TODO: low battery notification
@@ -14,22 +17,22 @@ floating_modifier $mod
 # Do not activate window on a title bar click 
 bindsym button1 nop
 
-bindsym $mod+Shift+c exec $gen && i3-msg reload
-bindsym $mod+Shift+r exec $gen && i3-msg restart
+bindsym $mod+Shift+c $exec $gen && i3-msg reload
+bindsym $mod+Shift+r $exec $gen && i3-msg restart
 
 # Just 12 groups of workspaces with 10 workspaces on each one
-bindsym Mod1+1 exec $gen 0 && i3-msg reload
-bindsym Mod1+2 exec $gen 1 && i3-msg reload
-bindsym Mod1+3 exec $gen 2 && i3-msg reload
-bindsym Mod1+4 exec $gen 3 && i3-msg reload
-bindsym Mod1+5 exec $gen 4 && i3-msg reload
-bindsym Mod1+6 exec $gen 5 && i3-msg reload
-bindsym Mod1+7 exec $gen 6 && i3-msg reload
-bindsym Mod1+8 exec $gen 7 && i3-msg reload
-bindsym Mod1+9 exec $gen 8 && i3-msg reload
-bindsym Mod1+0 exec $gen 9 && i3-msg reload
-bindsym Mod1+minus exec $gen 10 && i3-msg reload
-bindsym Mod1+plus exec $gen 11 && i3-msg reload
+bindsym Mod1+1 $exec $gen 0 && i3-msg reload
+bindsym Mod1+2 $exec $gen 1 && i3-msg reload
+bindsym Mod1+3 $exec $gen 2 && i3-msg reload
+bindsym Mod1+4 $exec $gen 3 && i3-msg reload
+bindsym Mod1+5 $exec $gen 4 && i3-msg reload
+bindsym Mod1+6 $exec $gen 5 && i3-msg reload
+bindsym Mod1+7 $exec $gen 6 && i3-msg reload
+bindsym Mod1+8 $exec $gen 7 && i3-msg reload
+bindsym Mod1+9 $exec $gen 8 && i3-msg reload
+bindsym Mod1+0 $exec $gen 9 && i3-msg reload
+bindsym Mod1+minus $exec $gen 10 && i3-msg reload
+bindsym Mod1+plus $exec $gen 11 && i3-msg reload
 
 # Plus some common workspaces
 bindsym $mod+grave workspace "0"

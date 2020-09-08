@@ -1,15 +1,15 @@
-bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Shift+Return exec i3-sensible-terminal and floating toggle
+bindsym $mod+Return $exec i3-sensible-terminal
+bindsym $mod+Shift+Return $exec i3-sensible-terminal and floating toggle
 
 bindsym $mod+Shift+q kill
 
-bindsym $mod+p exec rofi -show drun
-bindsym $mod+Shift+p exec rofi -show run
+bindsym $mod+p $exec rofi -show drun
+bindsym $mod+Shift+p --no-startup-id exec rofi -show run
 
-bindsym $mod+b exec --no-startup-id bluetoothctl connect 18:54:CF:A5:F7:40
-bindsym $mod+Shift+b exec --no-startup-id bluetoothctl disconnect 18:54:CF:A5:F7:40
+bindsym $mod+b $exec bluetoothctl connect 18:54:CF:A5:F7:40
+bindsym $mod+Shift+b $exec bluetoothctl disconnect 18:54:CF:A5:F7:40
 
-bindsym $mod+z exec --no-startup-id ~/linux/sh/toggle-timezones.sh
+bindsym $mod+z $exec ~/linux/sh/toggle-timezones.sh
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -53,9 +53,9 @@ bindsym Mod1+Right workspace next
 bindsym $mod+Ctrl+Left move container to workspace prev; workspace prev
 bindsym $mod+Ctrl+Right move container to workspace next; workspace next
 
-bindsym Mod1+d exec xrandr --output HDMI1 --auto --left-of eDP1
-bindsym Mod1+Shift+d exec xrandr --auto
+bindsym Mod1+d $exec xrandr --output HDMI1 --auto --left-of eDP1
+bindsym Mod1+Shift+d $exec xrandr --auto
 
 bindsym $mod+d move workspace to output right
 
-bindsym $mod+o exec ~/config/polybar/launch.sh
+bindsym $mod+o $exec ~/config/polybar/launch.sh
