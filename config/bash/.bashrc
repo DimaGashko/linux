@@ -1,3 +1,6 @@
+GREEN="\[$(tput setaf 2)\]"
+RESET="\[$(tput sgr0)\]"
+
 [[ $- != *i* ]] && return
 
 source /usr/share/doc/pkgfile/command-not-found.bash
@@ -17,6 +20,8 @@ formatGitBranch() {
 
 PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w \[\e[91m\]\$(formatGitBranch)\[\e[00m\]$ "
 
+PS2="${GREEN}>${RESET} "
+
 shopt -s checkwinsize
 shopt -s histappend
 shopt -s globstar
@@ -28,7 +33,11 @@ HISTSIZE=1000
 
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'
-alias ll='ls -la'
+alias ll='ls -Al'
+alias la='ls -A'
+alias l='ls -C'
+alias mv='mv -i'
+alias rm='rm -i'
 
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 export john=/usr/share/ptools/john/run
