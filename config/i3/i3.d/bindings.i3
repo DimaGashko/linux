@@ -4,7 +4,7 @@ bindsym $mod+Shift+Return $exec i3-sensible-terminal and floating toggle
 bindsym $mod+Shift+q kill
 
 bindsym $mod+p $exec rofi -show drun
-bindsym $mod+Shift+p --no-startup-id exec rofi -show run
+bindsym $mod+Shift+p $exec rofi -show run
 
 bindsym $mod+b $exec bluetoothctl connect 18:54:CF:A5:F7:40
 bindsym $mod+Shift+b $exec bluetoothctl disconnect 18:54:CF:A5:F7:40
