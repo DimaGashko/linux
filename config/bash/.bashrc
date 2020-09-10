@@ -31,6 +31,8 @@ HISTCONTROL=ignoreboth
 HISTFILESIZE=10000
 HISTSIZE=1000
 
+alias @='source ~/.bashrc'
+
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'
 alias ll='ls -Al'
