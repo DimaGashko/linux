@@ -36,6 +36,7 @@ bindsym Mod1+plus $exec $gen 11 && i3-msg reload
 
 # Plus some common workspaces
 bindsym $mod+grave workspace "0"
+bindsym $mod+minus workspace "121"
 bindsym $mod+plus workspace "122"
 bindsym $mod+BackSpace workspace "123"
 bindsym $mod+Home workspace "124"
