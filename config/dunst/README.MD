@@ -1,4 +1,4 @@
-# DEADD
+# Dunst
 
-Linux Notification Center
+Lightweight notification daemon
 
