@@ -12,13 +12,12 @@ bindsym Ctrl+XF86AudioLowerVolume $exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86MonBrightnessUp $exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown $exec xbacklight -dec 10
 
-bindsym Shift+XF86MonBrightnessUp $exec xbacklight -inc 2
-bindsym Shift+XF86MonBrightnessDown $exec xbacklight -dec 2
+bindsym Shift+XF86MonBrightnessUp $exec xbacklight -inc 1
+bindsym Shift+XF86MonBrightnessDown $exec xbacklight -dec 1
 
 bindsym Ctrl+XF86MonBrightnessUp $exec xbacklight -set 100
 bindsym Ctrl+XF86MonBrightnessDown $exec xbacklight -set 0
 
-# reading mode
 bindsym $mod+XF86MonBrightnessUp $exec sct 4500 && echo 1 > /tmp/night
 bindsym $mod+XF86MonBrightnessDown $exec sct && echo 0 > /tmp/night
 
@@ -31,5 +30,3 @@ bindsym $mod+m $exec playerctl play-pause
 
 # PrtScn
 bindsym Print $exec flameshot gui
-
-# bindsym --release $mod+r $exec xdotool key --clearmodifiers F5
