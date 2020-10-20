@@ -11,8 +11,8 @@ parseGitBranch() {
 
 formatGitBranch() {
   branch=$(parseGitBranch)
-  if [ "$branch" == "(master)" ]; then
-    echo "(MASTER)"
+  if [ "$branch" == "(master)" ] || [ "$branch" == "(main)" ]; then
+    echo ${branch^^}
   else
     echo $branch
   fi
