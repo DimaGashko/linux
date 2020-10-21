@@ -4,6 +4,7 @@ RESET="\[$(tput sgr0)\]"
 [[ $- != *i* ]] && return
 
 source /usr/share/doc/pkgfile/command-not-found.bash
+source /usr/share/nvm/init-nvm.sh
 
 parseGitBranch() {
   git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
