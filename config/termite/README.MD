@@ -9,4 +9,7 @@ https://github.com/thestinger/termite
 ```bash
 # Reload config
 killall -USR1 termite
+
+# Reload config automatically
+onchange ~/config/termite/termite.conf -- killall -USR1 termite
 ```

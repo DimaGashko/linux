@@ -15,5 +15,5 @@ for ws in {1..10}; do
 
    echo "bindsym \$mod+$key workspace $ws"
    echo "bindsym \$mod+Shift+$key move container to workspace $ws"
-   echo "bindsym \$mod+Ctrl+$key move container to workspace number $ws; workspace $ws"
+   # echo "bindsym \$mod+Ctrl+$key move container to workspace number $ws; workspace $ws"
 done
