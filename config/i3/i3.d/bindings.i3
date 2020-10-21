@@ -59,3 +59,5 @@ bindsym Mod1+Shift+d $exec xrandr --auto
 bindsym $mod+d move workspace to output right
 
 bindsym $mod+o $exec ~/config/polybar/launch.sh
+
+bindsym $mod+Ctrl+b $exec $updateBg

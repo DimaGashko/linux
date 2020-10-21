@@ -1,4 +1,4 @@
-$exec_always feh ~/images/bg/* --bg-scale --randomize  --no-fehbg 
+$exec_always $updateBg
 
 $exec_always setxkbmap -model pc105 -option 'grp:win_space_toggle'
 $exec_always setxkbmap -layout us,ru

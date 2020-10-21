@@ -5,6 +5,8 @@ set $exec_always exec_always --no-startup-id
 
 set $gen ~/config/i3/gen-i3.sh
 
+set $updateBg feh ~/images/bg/* --bg-scale --randomize --no-fehbg
+
 # TODO: low battery notification
 # TODO: full battery notification
 # TODO: move focus only inside current output
@@ -31,8 +33,8 @@ bindsym Ctrl+7 $exec $gen 6 && i3-msg reload
 bindsym Ctrl+8 $exec $gen 7 && i3-msg reload
 bindsym Ctrl+9 $exec $gen 8 && i3-msg reload
 bindsym Ctrl+0 $exec $gen 9 && i3-msg reload
-bindsym Ctrl+minus $exec $gen 10 && i3-msg reload
-bindsym Ctrl+plus $exec $gen 11 && i3-msg reload
+bindsym Mod1+Ctrl+minus $exec $gen 10 && i3-msg reload
+bindsym Mod1+Ctrl+plus $exec $gen 11 && i3-msg reload
 
 # Plus some common workspaces
 bindsym $mod+grave workspace "0"
