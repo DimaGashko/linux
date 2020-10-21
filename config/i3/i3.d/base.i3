@@ -5,8 +5,6 @@ set $exec_always exec_always --no-startup-id
 
 set $gen ~/config/i3/gen-i3.sh
 
-set $updateBg feh ~/images/bg/* --bg-scale --randomize --no-fehbg
-
 # TODO: low battery notification
 # TODO: full battery notification
 # TODO: move focus only inside current output

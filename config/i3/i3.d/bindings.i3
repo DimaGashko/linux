@@ -60,4 +60,4 @@ bindsym $mod+d move workspace to output right
 
 bindsym $mod+o $exec ~/config/polybar/launch.sh
 
-bindsym $mod+Ctrl+b $exec $updateBg
+bindsym $mod+Ctrl+b $exec feh ~/images/bg/* --bg-scale --randomize --no-fehbg
