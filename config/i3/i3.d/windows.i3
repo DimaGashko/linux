@@ -10,3 +10,4 @@ for_window [class=SimpleScreenRecorder] floating enable
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [title="Network Connections"] floating enable
+for_window [class="Gnome-control-center"] floating enable
