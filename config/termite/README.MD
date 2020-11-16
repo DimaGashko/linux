@@ -4,6 +4,8 @@ A keyboard-centric VTE-based terminal, aimed at use within a window manager with
 
 https://github.com/thestinger/termite
 
+![](../../screenshots/2020-11-16_12-37.png)
+
 # Helpers
 
 ```bash
