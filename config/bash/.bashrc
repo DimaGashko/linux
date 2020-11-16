@@ -48,3 +48,4 @@ export john=/usr/share/ptools/john/run
 
 export EDITOR=vim
 export VISUAL=vim
+export QT_QPA_PLATFORMTHEME=qt5ct
