@@ -30,7 +30,7 @@ bindsym Ctrl+6 $exec $gen 5 && i3-msg reload
 bindsym Ctrl+7 $exec $gen 6 && i3-msg reload
 bindsym Ctrl+8 $exec $gen 7 && i3-msg reload
 bindsym Ctrl+9 $exec $gen 8 && i3-msg reload
-bindsym Ctrl+0 $exec $gen 9 && i3-msg reload
+bindsym Mod1+Ctrl+0 $exec $gen 9 && i3-msg reload
 bindsym Mod1+Ctrl+minus $exec $gen 10 && i3-msg reload
 bindsym Mod1+Ctrl+plus $exec $gen 11 && i3-msg reload
 
