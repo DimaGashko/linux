@@ -6,3 +6,6 @@
 - dunst ([./config/dunst](./config/dunst))
 - picom ([./config/picom](./config/picom))
 - termite ([./config/termite](./config/termite))
+
+![](./screenshots/2020-11-16_12-37.png)
+![](./screenshots/2020-11-16_12-44.png)
