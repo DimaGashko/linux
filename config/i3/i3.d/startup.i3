@@ -1,7 +1,6 @@
 $exec ~/linux/sh/bgShow.sh 3600
 
-$exec_always setxkbmap -model pc105 -option 'grp:win_space_toggle'
-$exec_always setxkbmap -layout us,ru
+$exec_always setxkbmap -layout us,ru -model pc105 -option 'grp:win_space_toggle'
 
 $exec_always ~/linux/config/polybar/launch.sh
 
