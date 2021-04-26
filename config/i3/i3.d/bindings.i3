@@ -6,8 +6,8 @@ bindsym $mod+Shift+q kill
 bindsym $mod+p $exec rofi -show drun
 bindsym $mod+Shift+p $exec rofi -show run
 
-bindsym $mod+b $exec bluetoothctl connect 18:54:CF:A5:F7:40
-bindsym $mod+Shift+b $exec bluetoothctl disconnect 18:54:CF:A5:F7:40
+bindsym $mod+b $exec bluetoothctl connect 64:03:7F:DE:AC:3E
+bindsym $mod+Shift+b $exec bluetoothctl disconnect 64:03:7F:DE:AC:3E
 
 bindsym $mod+z $exec ~/linux/sh/toggle-timezones.sh
 

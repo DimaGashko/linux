@@ -27,7 +27,6 @@ PS2="${GREEN}>${RESET} "
 shopt -s checkwinsize
 shopt -s histappend
 shopt -s globstar
-shopt -s autocd
 
 HISTCONTROL=ignoreboth
 HISTFILESIZE=10000
