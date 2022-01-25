@@ -1,5 +1,8 @@
 set $mod Mod4
 
+# Double Fn
+set $fn XF86Launch1
+
 set $exec exec --no-startup-id
 set $exec_always exec_always --no-startup-id
 
