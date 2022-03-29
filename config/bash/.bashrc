@@ -39,6 +39,7 @@ alias ls='ls --color=auto'
 alias tree='tree -C'
 
 alias cwd='pwd | xclip -sel clipboard'
+alias connectaws='ssh -i ~/.ssh/aws.pem $AWS_USER@$AWS_IP'
 
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 export john=/usr/share/ptools/john/run
