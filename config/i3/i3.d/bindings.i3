@@ -1,5 +1,5 @@
-bindsym $mod+Return $exec i3-sensible-terminal
-bindsym $mod+Shift+Return $exec i3-sensible-terminal and floating toggle
+bindsym $mod+Return $exec termite
+bindsym $mod+Shift+Return $exec termite and floating toggle
 
 bindsym $mod+Shift+q kill
 
@@ -40,6 +40,11 @@ bindsym $mod+Left resize shrink width 100px or 10 ppt
 bindsym $mod+Down resize grow height 100px or 10 ppt
 bindsym $mod+Up resize shrink height 100px or 10 ppt
 bindsym $mod+Right resize grow width 100px or 10 ppt
+
+bindsym $mod+Shift+Left resize shrink width 1px
+bindsym $mod+Shift+Down resize grow height 1px
+bindsym $mod+Shift+Up resize shrink height 1px
+bindsym $mod+Shift+Right resize grow width 1px
 
 bindsym $mod+Prior resize grow width 100px or 10 ppt; resize grow height 100px or 10 ppt
 bindsym $mod+Next resize shrink width 100px or 10 ppt; resize shrink height 100px or 10 ppt

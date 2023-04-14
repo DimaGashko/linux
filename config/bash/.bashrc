@@ -20,7 +20,7 @@ formatGitBranch() {
   fi
 }
 
-PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w \[\e[91m\]\$(formatGitBranch)\[\e[00m\]$ "
+PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w \[\e[91m\]\$(formatGitBranch) \[\e[00m\]$ "
 
 PS2="${GREEN}>${RESET} "
 
@@ -47,3 +47,5 @@ export john=/usr/share/ptools/john/run
 export EDITOR=vim
 export VISUAL=vim
 export QT_QPA_PLATFORMTHEME=qt5ct
+
+export PATH=$PATH:~/go/bin
