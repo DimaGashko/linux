@@ -1,4 +1,4 @@
-bindsym $mod+Return $exec termite
+bindsym $mod+Return $exec xterm
 bindsym $mod+Shift+Return $exec termite and floating toggle
 
 bindsym $mod+Shift+q kill

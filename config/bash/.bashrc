@@ -1,28 +1,11 @@
-GREEN="\[$(tput setaf 2)\]"
-RESET="\[$(tput sgr0)\]"
-
 [[ $- != *i* ]] && return
 
+# Suggests a package to install if a command is not found
 source /usr/share/doc/pkgfile/command-not-found.bash
-source /usr/share/nvm/init-nvm.sh
-source ~/config/bash/.bashrc_tmp.sh
 
-parseGitBranch() {
-  git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
-
-formatGitBranch() {
-  branch=$(parseGitBranch)
-  if [ "$branch" == "(master)" ] || [ "$branch" == "(main)" ]; then
-    echo ${branch^^}
-  else
-    echo $branch
-  fi
-}
-
-PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w \[\e[91m\]\$(formatGitBranch) \[\e[00m\]$ "
-
-PS2="${GREEN}>${RESET} "
+for f in ~/config/bash/bashrc.d/*; do
+  source $f
+done
 
 shopt -s checkwinsize
 shopt -s histappend
@@ -38,11 +21,15 @@ alias grep='grep --color=auto'
 alias ls='ls --color=auto'
 alias tree='tree -C'
 
-alias cwd='pwd | xclip -sel clipboard'
-alias connectaws='ssh -i ~/.ssh/aws.pem $AWS_USER@$AWS_IP'
+alias copy='xclip -sel clipboard'
+alias pac='sudo pacman'
+
+PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w \[\e[91m\]\$(formatGitBranch) \[\e[00m\]$ "
+PS2="$(tput setaf 2)>$(tput sgr0) "
+
+export SUDO_PROMPT="$(tput bold setab 1 setaf 7)[sudo]$(tput sgr0) $(tput setaf 6)password for$(tput sgr0) $(tput setaf 2)%p$(tput sgr0): "
 
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-export john=/usr/share/ptools/john/run
 
 export EDITOR=vim
 export VISUAL=vim
