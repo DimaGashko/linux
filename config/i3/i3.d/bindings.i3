@@ -1,4 +1,4 @@
-bindsym $mod+Return $exec xterm
+bindsym $mod+Return $exec alacritty
 bindsym $mod+Shift+Return $exec termite and floating toggle
 
 bindsym $mod+Shift+q kill
@@ -66,7 +66,7 @@ bindsym $mod+d move workspace to output right
 
 bindsym $mod+o $exec ~/config/polybar/launch.sh
 
-bindsym $mod+Ctrl+b $exec feh ~/images/bg/* --bg-scale --randomize --no-fehbg
+bindsym $mod+Ctrl+b $exec feh ~/linux/other/bg-images/* --bg-scale --randomize --no-fehbg
 
 bindsym $mod+t $exec "setxkbmap -layout us,ru -model pc105 -option 'grp:win_space_toggle'"
 bindsym $mod++Ctrl+t $exec "setxkbmap -layout us,ua -model pc105 -option 'grp:win_space_toggle'"
