@@ -1,4 +1,4 @@
-bindsym $mod+Shift+e $exec "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e $exec "~/linux/sh/shutdown.sh"
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume $exec amixer -D pulse sset Master 5%+

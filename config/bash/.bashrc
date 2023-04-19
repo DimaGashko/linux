@@ -2,6 +2,7 @@
 
 # Suggests a package to install if a command is not found
 source /usr/share/doc/pkgfile/command-not-found.bash
+source /usr/share/nvm/init-nvm.sh
 
 for f in ~/config/bash/bashrc.d/*; do
   source $f
@@ -18,8 +19,18 @@ HISTSIZE=1000
 alias @='source ~/.bashrc'
 
 alias grep='grep --color=auto'
-alias ls='ls --color=auto'
+alias ls='lsd'
+alias lt='lsd --tree'
 alias tree='tree -C'
+
+cd() {
+  builtin cd "$@"
+
+  l=`ls | wc -l`
+  if (( $l < 30 )); then
+    ls
+  fi
+}
 
 alias copy='xclip -sel clipboard'
 alias pac='sudo pacman'
@@ -38,3 +49,5 @@ export VISUAL=vim
 export QT_QPA_PLATFORMTHEME=qt5ct
 
 export PATH=$PATH:~/go/bin
+
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/

@@ -12,13 +12,8 @@ set $gen ~/config/i3/gen-i3.sh
 # TODO: full battery notification
 # TODO: move focus only inside current output
 # TODO: improve lock/logout/shutdown system
- 
-font pango:unifont 10
 
 floating_modifier $mod
-
-# Do not activate window on a title bar click 
-bindsym button1 nop
 
 bindsym $mod+Shift+c $exec $gen && i3-msg reload
 bindsym $mod+Shift+r $exec $gen && i3-msg restart

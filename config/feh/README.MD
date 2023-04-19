@@ -1,0 +1,1 @@
+feh --geometry 1024x600 --borderless --scale-down  --cache-size 125 --cache-thumbnails --draw-filename --image-bg "#000" --slideshow-delay 50 --zoom-step 3 .

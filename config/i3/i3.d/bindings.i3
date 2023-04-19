@@ -1,10 +1,10 @@
 bindsym $mod+Return $exec alacritty
-bindsym $mod+Shift+Return $exec termite and floating toggle
+bindsym $mod+Shift+Return $exec "alacritty --class AlacrittyFloating"
 
 bindsym $mod+Shift+q kill
 
 bindsym $mod+p $exec rofi -show drun
-bindsym $mod+Shift+p $exec rofi -show run
+bindsym $mod+Shift+p $exec rofi -show window
 
 bindsym $mod+b $exec bluetoothctl connect 64:03:7F:DE:AC:3E
 bindsym $mod+Shift+b $exec bluetoothctl disconnect 64:03:7F:DE:AC:3E
@@ -36,6 +36,9 @@ bindsym $mod+Shift+y focus child
 bindsym $mod+n floating toggle
 bindsym $mod+Shift+n focus mode_toggle
 
+bindsym $mod+0x2c move scratchpad
+bindsym $mod+Shift+less scratchpad show
+
 bindsym $mod+Left resize shrink width 100px or 10 ppt
 bindsym $mod+Down resize grow height 100px or 10 ppt
 bindsym $mod+Up resize shrink height 100px or 10 ppt
@@ -66,7 +69,7 @@ bindsym $mod+d move workspace to output right
 
 bindsym $mod+o $exec ~/config/polybar/launch.sh
 
-bindsym $mod+Ctrl+b $exec feh ~/linux/other/bg-images/* --bg-scale --randomize --no-fehbg
+bindsym $mod+Ctrl+b $exec feh ~/linux/img/bg-images/* --bg-scale --randomize --no-fehbg
 
 bindsym $mod+t $exec "setxkbmap -layout us,ru -model pc105 -option 'grp:win_space_toggle'"
 bindsym $mod++Ctrl+t $exec "setxkbmap -layout us,ua -model pc105 -option 'grp:win_space_toggle'"
