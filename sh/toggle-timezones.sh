@@ -3,10 +3,9 @@
 tz1=Europe/Kiev
 tz2=America/Los_Angeles
 
+newTz=$tz1
 if [[ $(timedatectl show) == *Timezone=$tz1* ]]; then
    newTz=$tz2
-else
-   newTz=$tz1
 fi
 
-timedatectl --no-ask-password set-timezone $newTz
+sudo -n timedatectl set-timezone $newTz
