@@ -16,21 +16,23 @@ HISTCONTROL=ignoreboth
 HISTFILESIZE=10000
 HISTSIZE=1000
 
+cd() {
+  if ! builtin cd "$@"; then
+    return
+  fi
+
+  l=`ls | wc -l`
+  if (( $l < 30 )); then
+    lsd
+  fi
+}
+
 alias @='source ~/.bashrc'
 
 alias grep='grep --color=auto'
 alias ls='lsd'
 alias lt='lsd --tree'
 alias tree='tree -C'
-
-cd() {
-  builtin cd "$@" 
-
-  l=`ls | wc -l`
-  if (( $l < 30 )); then
-    ls
-  fi
-}
 
 alias copy='xclip -sel clipboard'
 alias pac='sudo pacman'

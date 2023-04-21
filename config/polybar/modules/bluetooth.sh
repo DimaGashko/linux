@@ -1,8 +1,13 @@
 #!/bin/bash
 
-bat=$(bluetooth-battery-level)
-if [[ -z "$bat" ]]; then
+if ! bluetoothctl info | grep -q "Connected: yes"; then
    echo ""
+   exit 0
+fi
+
+bat=$(~/linux/sh/bluetooth-battery-level.sh)
+if [[ -z "$bat" ]]; then
+   echo "0"
    exit 0
 fi
 
