@@ -18,3 +18,9 @@ for_window [class="Nm-connection-editor"] floating enable
 for_window [class="flameshot"] floating enable
 for_window [class="qt5ct"] floating enable
 for_window [class="Xfd"] fullscreen enable
+
+for_window [title="(.+)ssr - Visual Studio Code"] move container to workspace 2
+for_window [title="(.+)api - Visual Studio Code"] move container to workspace 3
+
+for_window [class="Slack"] move container to workspace 123
+for_window [class="Gnome-system-monitor"] move container to workspace 124

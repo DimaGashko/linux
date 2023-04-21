@@ -1,4 +1,3 @@
-bindsym $mod+Shift+e $exec "~/linux/sh/shutdown.sh"
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume $exec amixer -D pulse sset Master 5%+

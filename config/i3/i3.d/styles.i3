@@ -13,7 +13,7 @@ client.focused_inactive  $inactive-bg-color  $inactive-bg-color $inactive-text-c
 client.urgent            $urgent-bg-color    $urgent-bg-color   $text-color           #607D8B
 
 # hide tabs (in tab mode) (as much as possible)
-for_window [class=".*"] title_format " "
+for_window [all] title_format " "
 font pango:unifont 0.5
 
 # Do not activate window on a title bar click 

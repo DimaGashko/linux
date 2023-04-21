@@ -24,7 +24,7 @@ alias lt='lsd --tree'
 alias tree='tree -C'
 
 cd() {
-  builtin cd "$@"
+  builtin cd "$@" 
 
   l=`ls | wc -l`
   if (( $l < 30 )); then
@@ -48,6 +48,6 @@ export EDITOR=vim
 export VISUAL=vim
 export QT_QPA_PLATFORMTHEME=qt5ct
 
-export PATH=$PATH:~/go/bin
+export PATH=$PATH:~/go/bin:~/linux/bin
 
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/

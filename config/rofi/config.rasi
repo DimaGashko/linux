@@ -84,13 +84,13 @@ configuration {
 /*	kb-accept-custom-alt: "Control+Shift+Return";*/
 /*	kb-accept-alt: "Shift+Return";*/
 /*	kb-delete-entry: "Shift+Delete";*/
-	 kb-mode-next: "Shift+Right,Control+Tab,Super+p";
-	 kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab,Super+P";
+	 kb-mode-next: "Shift+Right,Control+Tab,Super+P";
+	 kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab";
 /*	kb-mode-complete: "Control+l";*/
 /*	kb-row-left: "Control+Page_Up";*/
 /*	kb-row-right: "Control+Page_Down";*/
 /*	kb-row-up: "Up,Control+p";*/
-/*	kb-row-down: "Down,Control+n";*/
+   kb-row-down: "Down,Control+n,Super+p";
 /*	kb-row-tab: "";*/
 /*	kb-element-next: "Tab";*/
 /*	kb-element-prev: "ISO_Left_Tab";*/

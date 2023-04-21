@@ -1,3 +1,5 @@
+bindsym $mod+Shift+e $exec "~/linux/sh/shutdown.sh"
+
 bindsym $mod+Return $exec alacritty
 bindsym $mod+Shift+Return $exec "alacritty --class AlacrittyFloating"
 
@@ -67,7 +69,7 @@ bindsym Mod1+Shift+d $exec xrandr --auto
 
 bindsym $mod+d move workspace to output right
 
-bindsym $mod+o $exec ~/config/polybar/launch.sh
+bindsym $mod+o $exec ~/config/polybar/bin/launch.sh
 
 bindsym $mod+Ctrl+b $exec feh ~/linux/img/bg-images/* --bg-scale --randomize --no-fehbg
 
