@@ -17,6 +17,7 @@ for_window [class="AlacrittyFloating"] floating enable
 for_window [class="Nm-connection-editor"] floating enable
 for_window [class="flameshot"] floating enable
 for_window [class="qt5ct"] floating enable
+
 for_window [class="Xfd"] fullscreen enable
 
 for_window[title="(.+)Trello Board(.+)"] move container to workspace 9

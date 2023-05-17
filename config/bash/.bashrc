@@ -50,6 +50,8 @@ export EDITOR=vim
 export VISUAL=vim
 export QT_QPA_PLATFORMTHEME=qt5ct
 
-export PATH=$PATH:~/go/bin:~/linux/bin
+export PATH=$PATH:~/go/bin:~/.local/bin:~/linux/bin
 
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/
+
+eval "$(github-copilot-cli alias -- "$0")"
