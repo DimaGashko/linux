@@ -12,7 +12,7 @@ if [[ -z "$bat" ]]; then
 fi
 
 color="#fff"
-if (($bat < 20)); then
+if (($bat < 5)); then
    color="#f00"
 fi
 

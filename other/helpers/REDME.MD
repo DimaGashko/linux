@@ -25,3 +25,9 @@ fc-cache -f -v
 
 
 xfd -fa "Font Awesome 6 Free" -rows 40 -columns 50
+
+xrdb -merge $HOME/.config/X11/.Xresources
+
+
+Reset password lock after 3 failed attempts
+faillock --reset

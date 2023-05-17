@@ -63,8 +63,8 @@ bindsym Mod1+Right workspace next
 bindsym $mod+Ctrl+Left move container to workspace prev; workspace prev
 bindsym $mod+Ctrl+Right move container to workspace next; workspace next
 
-bindsym Mod1+d $exec xrandr --output HDMI1 --auto --left-of eDP1
-bindsym Mod1+f $exec xrandr --output DP1 --auto --right-of eDP1 
+bindsym Mod1+d $exec xrandr --output HDMI-1 --auto --left-of eDP-1
+bindsym Mod1+f $exec xrandr --output DP-1 --auto --right-of eDP-1 
 bindsym Mod1+Shift+d $exec xrandr --auto
 
 bindsym $mod+d move workspace to output right
@@ -74,4 +74,4 @@ bindsym $mod+o $exec ~/config/polybar/bin/launch.sh
 bindsym $mod+Ctrl+b $exec feh ~/linux/img/bg-images/* --bg-scale --randomize --no-fehbg
 
 bindsym $mod+t $exec "setxkbmap -layout us,ru -model pc105 -option 'grp:win_space_toggle'"
-bindsym $mod++Ctrl+t $exec "setxkbmap -layout us,ua -model pc105 -option 'grp:win_space_toggle'"
+bindsym $mod+Ctrl+t $exec "setxkbmap -layout us,ua -model pc105 -option 'grp:win_space_toggle'"
