@@ -63,8 +63,8 @@ bindsym Mod1+Right workspace next
 bindsym $mod+Ctrl+Left move container to workspace prev; workspace prev
 bindsym $mod+Ctrl+Right move container to workspace next; workspace next
 
-bindsym Mod1+d $exec xrandr --output HDMI-1 --auto --left-of eDP-1
-bindsym Mod1+f $exec xrandr --output DP-1 --auto --right-of eDP-1 
+bindsym Mod1+d $exec xrandr --output DP-4 --auto --right-of eDP-1
+bindsym Mod1+f $exec xrandr --output DP-3 --auto --left-of eDP-1 
 bindsym Mod1+Shift+d $exec xrandr --auto
 
 bindsym $mod+d move workspace to output right

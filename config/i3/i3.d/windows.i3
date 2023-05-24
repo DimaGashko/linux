@@ -30,4 +30,4 @@ for_window [title="(.+)ab - Visual Studio Code"] move container to workspace 3
 for_window [title="(.+)ab - Visual Studio Code"] layout tabbed
 
 for_window [class="Slack"] move container to workspace 123
-for_window [class="Gnome-system-monitor"] move container to workspace 124
+for_window [class="Gnome-system-monitor"] move container to workspace 122

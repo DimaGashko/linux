@@ -1,5 +1,9 @@
 [[ $- != *i* ]] && return
 
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+  exec startx
+fi
+
 # Suggests a package to install if a command is not found
 source /usr/share/doc/pkgfile/command-not-found.bash
 source /usr/share/nvm/init-nvm.sh
@@ -11,6 +15,8 @@ done
 shopt -s checkwinsize
 shopt -s histappend
 shopt -s globstar
+
+complete -cf sudo
 
 HISTCONTROL=ignoreboth
 HISTFILESIZE=10000

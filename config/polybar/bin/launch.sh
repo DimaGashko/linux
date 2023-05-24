@@ -6,5 +6,5 @@ for id in $(xwininfo -root -tree | grep 'polybar-' | awk '{print $1}'); do
 done
 
 polybar eDP-1 >> "/var/log/userlog/polybar.eDP-1.log" 2>&1 &
-polybar HDMI-1 >> "/var/log/userlog/polybar.HDMI-1.log" 2>&1 & 
-polybar DP-1 >> "/var/log/userlog/polybar.DP-1.log" 2>&1 &
+polybar DP-3 >> "/var/log/userlog/polybar.DP-3.log" 2>&1 & 
+polybar DP-4 >> "/var/log/userlog/polybar.DP-4.log" 2>&1 &
