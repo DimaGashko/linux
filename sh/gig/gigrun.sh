@@ -37,3 +37,6 @@ i3-msg "split v"
 
 alacritty --working-directory ~/ab -e bash -c "go run main.go config.json; bash" &
 
+code ~/ssr
+code ~/api
+
