@@ -41,18 +41,18 @@ bindsym $mod+Shift+n focus mode_toggle
 bindsym $mod+0x2c move scratchpad
 bindsym $mod+Shift+less scratchpad show
 
-bindsym $mod+Left resize shrink width 100px or 10 ppt
-bindsym $mod+Down resize grow height 100px or 10 ppt
-bindsym $mod+Up resize shrink height 100px or 10 ppt
-bindsym $mod+Right resize grow width 100px or 10 ppt
+bindsym $mod+Left resize shrink width 5px or 1 ppt
+bindsym $mod+Down resize grow height 5px or 1 ppt
+bindsym $mod+Up resize shrink height 5px or 1 ppt
+bindsym $mod+Right resize grow width 5px or 1 ppt
 
 bindsym $mod+Shift+Left resize shrink width 1px
 bindsym $mod+Shift+Down resize grow height 1px
 bindsym $mod+Shift+Up resize shrink height 1px
 bindsym $mod+Shift+Right resize grow width 1px
 
-bindsym $mod+Prior resize grow width 100px or 10 ppt; resize grow height 100px or 10 ppt
-bindsym $mod+Next resize shrink width 100px or 10 ppt; resize shrink height 100px or 10 ppt
+bindsym $mod+Prior resize grow width 5px or 1 ppt; resize grow height 5px or 1 ppt
+bindsym $mod+Next resize shrink width 5px or 1 ppt; resize shrink height 5px or 1 ppt
 
 bindsym $mod+u [urgent=latest] focus
 

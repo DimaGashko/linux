@@ -1,5 +1,5 @@
 #!/bin/bash
 
-systemctl start vmware-networks-configuration.service
-systemctl start vmware-networks.service
-systemctl start vmware-usbarbitrator.service
+sudo systemctl start vmware-networks-configuration.service
+sudo systemctl start vmware-networks.service
+sudo systemctl start vmware-usbarbitrator.service

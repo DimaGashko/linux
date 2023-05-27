@@ -31,3 +31,6 @@ xrdb -merge $HOME/.config/X11/.Xresources
 
 Reset password lock after 3 failed attempts
 faillock --reset
+
+
+pacmd set-card-profile bluez_card.64_03_7F_DE_AC_3E  a2dp_sink

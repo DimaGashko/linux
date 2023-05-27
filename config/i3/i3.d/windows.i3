@@ -20,14 +20,16 @@ for_window [class="qt5ct"] floating enable
 
 for_window [class="Xfd"] fullscreen enable
 
-for_window[title="(.+)Trello Board(.+)"] move container to workspace 9
-for_window[title="(.+)Trello Board(.+)"] layout stacking
+# for_window[title="(.+)Trello Board(.+)"] move container to workspace 9
+# for_window[title="(.+)Trello Board(.+)"] layout stacking
 
-for_window [title="(.+)ssr - Visual Studio Code"] move container to workspace 2
-for_window [title="(.+)api - Visual Studio Code"] move container to workspace 3
+for_window [title="(.+)ssr - Visual Studio Code(.*)"] move container to workspace 2
+for_window [title="(.+)api - Visual Studio Code(.*)"] move container to workspace 3
 
-for_window [title="(.+)ab - Visual Studio Code"] move container to workspace 3
-for_window [title="(.+)ab - Visual Studio Code"] layout tabbed
+for_window [title="(.+)ab - Visual Studio Code(.*)"] move container to workspace 4; workspace 4; layout tabbed
+# for_window [title="(.+)ab - Visual Studio Code(.*)"] layout tabbed
+
+for_window [title="(.+)linux - Visual Studio Code(.*)"] move container to workspace 12
 
 for_window [class="Slack"] move container to workspace 123
 for_window [class="Gnome-system-monitor"] move container to workspace 122

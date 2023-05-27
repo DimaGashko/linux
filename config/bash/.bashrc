@@ -6,6 +6,8 @@ fi
 
 # Suggests a package to install if a command is not found
 source /usr/share/doc/pkgfile/command-not-found.bash
+
+source /usr/share/bash-completion/bash_completion
 source /usr/share/nvm/init-nvm.sh
 
 for f in ~/config/bash/bashrc.d/*; do
