@@ -44,6 +44,7 @@ alias tree='tree -C'
 
 alias copy='xclip -sel clipboard'
 alias pac='sudo pacman'
+alias c='code'
 
 alias mirrors_sync='sudo reflector -c UA,FR,DE,PL,CZ,EE,FI,IT,LT,LV --sort rate --latest 50 --threads 50 --protocol https --verbose --save /etc/pacman.d/mirrorlist'
 
