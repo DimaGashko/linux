@@ -41,30 +41,37 @@ bindsym $mod+Shift+n focus mode_toggle
 bindsym $mod+0x2c move scratchpad
 bindsym $mod+Shift+less scratchpad show
 
-bindsym $mod+Left resize shrink width 5px or 1 ppt
-bindsym $mod+Down resize grow height 5px or 1 ppt
-bindsym $mod+Up resize shrink height 5px or 1 ppt
-bindsym $mod+Right resize grow width 5px or 1 ppt
+bindsym $mod+Left resize shrink width 15px
+bindsym $mod+Down resize grow height 15px
+bindsym $mod+Up resize shrink height 15px
+bindsym $mod+Right resize grow width 15px
 
-bindsym $mod+Shift+Left resize shrink width 1px
-bindsym $mod+Shift+Down resize grow height 1px
-bindsym $mod+Shift+Up resize shrink height 1px
-bindsym $mod+Shift+Right resize grow width 1px
+bindsym $mod+Shift+Left resize shrink width 5px
+bindsym $mod+Shift+Down resize grow height 5px
+bindsym $mod+Shift+Up resize shrink height 5px
+bindsym $mod+Shift+Right resize grow width 5px
+
+bindsym $mod+Ctrl+Left resize shrink width 100px
+bindsym $mod+Ctrl+Down resize grow height 100px
+bindsym $mod+Ctrl+Up resize shrink height 100px
+bindsym $mod+Ctrl+Right resize grow width 100px
 
 bindsym $mod+Prior resize grow width 5px or 1 ppt; resize grow height 5px or 1 ppt
 bindsym $mod+Next resize shrink width 5px or 1 ppt; resize shrink height 5px or 1 ppt
-
-bindsym $mod+u [urgent=latest] focus
 
 bindsym $mod+Tab workspace back_and_forth
 bindsym Mod1+Left workspace prev
 bindsym Mod1+Right workspace next
 
-bindsym $mod+Ctrl+Left move container to workspace prev; workspace prev
-bindsym $mod+Ctrl+Right move container to workspace next; workspace next
+# bindsym $mod+Ctrl+Left move container to workspace prev; workspace prev
+# bindsym $mod+Ctrl+Right move container to workspace next; workspace next
 
-bindsym Mod1+d $exec xrandr --output DP-4 --auto --right-of eDP-1
-bindsym Mod1+f $exec xrandr --output DP-3 --auto --left-of eDP-1 
+# bindsym Mod1+d $exec xrandr --output DP-4 --auto --right-of eDP-1
+# bindsym Mod1+f $exec xrandr --output DP-3 --auto --left-of eDP-1 
+
+bindsym Mod1+d $exec xrandr --output DP-4 --auto
+bindsym Mod1+f $exec xrandr --output DP-3 --auto
+
 bindsym Mod1+Shift+d $exec xrandr --auto
 
 bindsym $mod+d move workspace to output right
@@ -73,5 +80,9 @@ bindsym $mod+o $exec ~/config/polybar/bin/launch.sh
 
 bindsym $mod+Ctrl+b $exec feh ~/linux/img/bg-images/* --bg-scale --randomize --no-fehbg
 
-bindsym $mod+t $exec "setxkbmap -layout us,ru -model pc105 -option 'grp:win_space_toggle'"
-bindsym $mod+Ctrl+t $exec "setxkbmap -layout us,ua -model pc105 -option 'grp:win_space_toggle'"
+bindsym $mod+t $exec ~/linux/sh/thermal/set-themal.sh
+
+bindsym $mod+u $exec "setxkbmap -layout us,ua -model pc105 -option 'grp:win_space_toggle'"
+bindsym $mod+Shift+u $exec "setxkbmap -layout us,ru -model pc105 -option 'grp:win_space_toggle'"
+
+

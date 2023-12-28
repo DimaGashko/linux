@@ -1,9 +1,5 @@
 [[ $- != *i* ]] && return
 
-if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-  exec startx
-fi
-
 # Suggests a package to install if a command is not found
 source /usr/share/doc/pkgfile/command-not-found.bash
 
@@ -46,7 +42,13 @@ alias copy='xclip -sel clipboard'
 alias pac='sudo pacman'
 alias c='code'
 
+alias gallery='nsxiv -af'
+alias galleryPreview='nsxiv -aft'
+
+alias moz_cjpg='/opt/mozjpeg/bin/cjpeg'
+
 alias mirrors_sync='sudo reflector -c UA,FR,DE,PL,CZ,EE,FI,IT,LT,LV --sort rate --latest 50 --threads 50 --protocol https --verbose --save /etc/pacman.d/mirrorlist'
+alias mirrors_sync2='sudo reflector --sort rate --latest 1000 --threads 50 --protocol https --verbose --save /etc/pacman.d/mirrorlist'
 
 PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w \[\e[91m\]\$(formatGitBranch) \[\e[00m\]$ "
 PS2="$(tput setaf 2)>$(tput sgr0) "
@@ -59,8 +61,12 @@ export EDITOR=vim
 export VISUAL=vim
 export QT_QPA_PLATFORMTHEME=qt5ct
 
-export PATH=$PATH:~/go/bin:~/.local/bin:~/linux/bin
+export PATH=$PATH:~/go/bin:~/.local/bin:~/linux/bin:~/gimg/bin
 
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/
 
 eval "$(github-copilot-cli alias -- "$0")"
+
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+  exec startx
+fi

@@ -1,3 +1,4 @@
+$exec ~/linux/sh/thermal/update-thermal.sh
 $exec ~/linux/sh/bgShow.sh 3600
 
 $exec_always picom
