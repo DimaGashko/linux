@@ -1,0 +1,43 @@
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.selection]
+background = "#5e5f62"
+text = "CellForeground"
+
+[cursor.style]
+blinking = "On"
+shape = "Beam"
+
+[env]
+WINIT_X11_SCALE_FACTOR = "1.0"
+
+[font]
+size = 9
+
+[[hints.enabled]]
+command = "xdg-open"
+hyperlinks = true
+post_processing = true
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\u0000-\u001F\u007F-<>\"\\s{-}\\^⟨⟩`]+"
+
+[hints.enabled.binding]
+key = "U"
+mods = "Control|Shift"
+
+[hints.enabled.mouse]
+enabled = true
+mods = "Control"
+
+[window]
+decorations = "none"
+dynamic_title = true
+opacity = 0.75
+
+[window.dimensions]
+columns = 100
+lines = 30
+
+[window.padding]
+x = 4
+y = 2
