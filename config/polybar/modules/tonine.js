@@ -11,4 +11,4 @@ const restDays = daysToSeptember - daysToToday;
 
 const tonine = restDays / daysToSeptember * 100;
 
-console.log(`${restDays ^ 0}/${Math.round(daysToSeptember)} (${daysToToday.toFixed(1)}, ${tonine.toFixed(3)}%)`);
+console.log(`${restDays ^ 0}/${Math.round(daysToSeptember)} (${daysToToday.toFixed(1)}, ${tonine.toFixed(2)}%)`);
