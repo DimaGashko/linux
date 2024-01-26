@@ -9,6 +9,6 @@ const daysToToday = (today - yearBeginning) / DAY;
 const daysToSeptember = (september - yearBeginning) / DAY;
 const restDays = daysToSeptember - daysToToday;
 
-const tonine = restDays / daysToSeptember * 100;
+const tonine = (1 - restDays / daysToSeptember) * 100;
 
-console.log(`${restDays ^ 0}/${Math.round(daysToSeptember)} (${daysToToday.toFixed(1)}, ${tonine.toFixed(2)}%)`);
+console.log(`${daysToToday.toFixed(1)}/${Math.round(daysToSeptember)} (${restDays ^ 0}, ${tonine.toFixed(2)}%)`);
