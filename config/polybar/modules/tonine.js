@@ -1,14 +1,18 @@
-
 const DAY = 1000 * 60 * 60 * 24;
 
+const startDate = new Date(2024, 8, 1); 
+const endDate = new Date(2025, 8, 1); 
 const today = new Date();
-const yearBeginning = new Date(today.getFullYear(), 0, 1);
-const september = new Date(today.getFullYear(), 8, 1);
 
-const daysToToday = (today - yearBeginning) / DAY;
-const daysToSeptember = (september - yearBeginning) / DAY;
-const restDays = daysToSeptember - daysToToday;
+const daysFromStart = (today - startDate) / DAY;
+const totalDays = (endDate - startDate) / DAY;
+const restDays = totalDays - daysFromStart;
 
-const tonine = (1 - restDays / daysToSeptember) * 100;
+const percentageElapsed = (daysFromStart / totalDays) * 100;
 
-console.log(`${daysToToday.toFixed(1)}/${Math.round(daysToSeptember)} (${restDays ^ 0}, ${tonine.toFixed(2)}%)`);
+const $from = daysFromStart.toFixed(1);
+const $total = Math.round(totalDays);
+const $rest = restDays ^ 0;
+const $percentage = percentageElapsed.toFixed(2);
+
+console.log(`${$from}/${$total} (${$rest}, ${$percentage}%)`);

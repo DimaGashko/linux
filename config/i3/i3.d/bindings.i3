@@ -66,11 +66,12 @@ bindsym Mod1+Right workspace next
 # bindsym $mod+Ctrl+Left move container to workspace prev; workspace prev
 # bindsym $mod+Ctrl+Right move container to workspace next; workspace next
 
-# bindsym Mod1+d $exec xrandr --output DP-4 --auto --right-of eDP-1
-# bindsym Mod1+f $exec xrandr --output DP-3 --auto --left-of eDP-1 
+bindsym Mod1+d $exec xrandr --output DP-4 --auto --right-of eDP-1
+bindsym Mod1+f $exec xrandr --output DP-3 --auto --left-of eDP-1
+bindsym Mod1+g $exec xrandr --output DP-3 --same-as eDP-1 --scale 1x1 --mode 1920x1200
 
-bindsym Mod1+d $exec xrandr --output DP-4 --auto
-bindsym Mod1+f $exec xrandr --output DP-3 --auto
+# bindsym Mod1+d $exec xrandr --output DP-4 --auto
+# bindsym Mod1+f $exec xrandr --output DP-3 --auto
 
 bindsym Mod1+Shift+d $exec xrandr --auto
 

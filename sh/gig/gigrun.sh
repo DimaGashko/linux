@@ -29,13 +29,13 @@ sleep $interval
 i3-msg "split v"
 
 # ab
-alacritty --working-directory ~/ab &
+# alacritty --working-directory ~/ab &
 
-sleep $interval
-i3-msg "move right"
-i3-msg "split v"
+# sleep $interval
+# i3-msg "move right"
+# i3-msg "split v"
 
-alacritty --working-directory ~/ab -e bash -c "go run main.go config.json; bash" &
+# alacritty --working-directory ~/ab -e bash -c "go run main.go config.json; bash" &
 
 # code
 code ~/ssr
