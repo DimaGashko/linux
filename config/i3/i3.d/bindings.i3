@@ -11,6 +11,14 @@ bindsym $mod+Shift+p $exec rofi -show window
 bindsym $mod+b $exec bluetoothctl connect 64:03:7F:DE:AC:3E
 bindsym $mod+Shift+b $exec bluetoothctl disconnect 64:03:7F:DE:AC:3E
 
+bindsym Mod1+k $exec bluetoothctl connect C1:7F:42:AB:9B:F9
+bindsym Mod1+Shift+b $exec bluetoothctl disconnect C1:7F:42:AB:9B:F9
+
+# 20:74:CF:C9:96:DE - Aeropex by AfterShokz
+# 64:03:7F:DE:AC:3E - galaxy buds   
+
+# C1:7F:42:AB:9B:F9 - Keychron K3
+
 bindsym $mod+z $exec ~/linux/sh/toggle-timezones.sh
 
 bindsym $mod+h focus left

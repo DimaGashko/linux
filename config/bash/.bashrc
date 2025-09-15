@@ -4,7 +4,6 @@
 source /usr/share/doc/pkgfile/command-not-found.bash
 
 source /usr/share/bash-completion/bash_completion
-source /usr/share/nvm/init-nvm.sh
 
 for f in ~/config/bash/bashrc.d/*; do
   source $f
@@ -65,8 +64,11 @@ export PATH=$PATH:~/go/bin:~/.local/bin:~/linux/bin:~/gimg/bin
 
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/
 
-eval "$(github-copilot-cli alias -- "$0")"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" 
 
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   exec startx
 fi
+. "$HOME/.cargo/env"

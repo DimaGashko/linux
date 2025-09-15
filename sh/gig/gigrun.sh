@@ -11,7 +11,7 @@ alacritty --working-directory ~/ssr &
 sleep $interval
 i3-msg "split v"
 
-alacritty --working-directory ~/ssr/frontend -e bash -c "yarn serve; bash" &
+alacritty --working-directory ~/ssr/frontend &
 
 sleep $interval
 i3-msg "split v"
@@ -23,7 +23,7 @@ sleep $interval
 i3-msg "move right"
 i3-msg "split v"
 
-alacritty --working-directory ~/api -e bash -c "LD_LIBRARY_PATH=/usr/local/lib go run main.go config.json; bash" &
+alacritty --working-directory ~/api -e bash -c "go run main.go config.json; bash" &
 
 sleep $interval
 i3-msg "split v"
