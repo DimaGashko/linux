@@ -2,7 +2,7 @@ $exec ~/linux/sh/bgShow.sh 3600
 
 $exec_always picom
 
-$exec_always setxkbmap -layout us,ru -model pc105 -option 'grp:win_space_toggle'
+$exec_always ~/linux/sh/keyboard/layout-switcher.sh
 
 $exec_always ~/config/polybar/bin/launch.sh
 

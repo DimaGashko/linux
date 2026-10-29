@@ -1,0 +1,182 @@
+[
+  {
+    "name": "workspaces",
+    "codepoint": "E000",
+    "source": "src/workspaces.svg"
+  },
+  {
+    "name": "openai",
+    "codepoint": "E001",
+    "source": "src/openai.svg"
+  },
+  {
+    "name": "fast-badge",
+    "codepoint": "E002",
+    "source": "src/fast-badge.svg"
+  },
+  {
+    "name": "volume-low",
+    "codepoint": "E003",
+    "source": "src/volume-low.svg"
+  },
+  {
+    "name": "volume-medium",
+    "codepoint": "E004",
+    "source": "src/volume-medium.svg"
+  },
+  {
+    "name": "volume-high",
+    "codepoint": "E005",
+    "source": "src/volume-high.svg"
+  },
+  {
+    "name": "volume-muted",
+    "codepoint": "E006",
+    "source": "src/volume-muted.svg"
+  },
+  {
+    "name": "headphones",
+    "codepoint": "E007",
+    "source": "src/headphones.svg"
+  },
+  {
+    "name": "globe",
+    "codepoint": "E008",
+    "source": "src/globe.svg"
+  },
+  {
+    "name": "cpu",
+    "codepoint": "E009",
+    "source": "src/cpu.svg"
+  },
+  {
+    "name": "memory",
+    "codepoint": "E00A",
+    "source": "src/memory.svg"
+  },
+  {
+    "name": "performance",
+    "codepoint": "E00B",
+    "source": "src/performance.svg"
+  },
+  {
+    "name": "balanced",
+    "codepoint": "E00C",
+    "source": "src/balanced.svg"
+  },
+  {
+    "name": "quiet",
+    "codepoint": "E00D",
+    "source": "src/quiet.svg"
+  },
+  {
+    "name": "cool",
+    "codepoint": "E00E",
+    "source": "src/cool.svg"
+  },
+  {
+    "name": "clock",
+    "codepoint": "E00F",
+    "source": "src/clock.svg"
+  },
+  {
+    "name": "sun",
+    "codepoint": "E010",
+    "source": "src/sun.svg"
+  },
+  {
+    "name": "moon",
+    "codepoint": "E011",
+    "source": "src/moon.svg"
+  },
+  {
+    "name": "wifi",
+    "codepoint": "E012",
+    "source": "src/wifi.svg"
+  },
+  {
+    "name": "wifi-off",
+    "codepoint": "E013",
+    "source": "src/wifi-off.svg"
+  },
+  {
+    "name": "bluetooth",
+    "codepoint": "E014",
+    "source": "src/bluetooth.svg"
+  },
+  {
+    "name": "timer",
+    "codepoint": "E015",
+    "source": "src/timer.svg"
+  },
+  {
+    "name": "battery-0",
+    "codepoint": "E016",
+    "source": "src/battery-0.svg"
+  },
+  {
+    "name": "battery-1",
+    "codepoint": "E017",
+    "source": "src/battery-1.svg"
+  },
+  {
+    "name": "battery-2",
+    "codepoint": "E018",
+    "source": "src/battery-2.svg"
+  },
+  {
+    "name": "battery-3",
+    "codepoint": "E019",
+    "source": "src/battery-3.svg"
+  },
+  {
+    "name": "battery-4",
+    "codepoint": "E01A",
+    "source": "src/battery-4.svg"
+  },
+  {
+    "name": "temperature-0",
+    "codepoint": "E01B",
+    "source": "src/temperature-0.svg"
+  },
+  {
+    "name": "temperature-1",
+    "codepoint": "E01C",
+    "source": "src/temperature-1.svg"
+  },
+  {
+    "name": "temperature-2",
+    "codepoint": "E01D",
+    "source": "src/temperature-2.svg"
+  },
+  {
+    "name": "temperature-3",
+    "codepoint": "E01E",
+    "source": "src/temperature-3.svg"
+  },
+  {
+    "name": "power",
+    "codepoint": "E01F",
+    "source": "src/power.svg"
+  },
+  {
+    "name": "restart",
+    "codepoint": "E020",
+    "source": "src/restart.svg"
+  },
+  {
+    "name": "logout",
+    "codepoint": "E021",
+    "source": "src/logout.svg"
+  },
+  {
+    "name": "cancel",
+    "codepoint": "E022",
+    "source": "src/cancel.svg"
+  },
+  {
+    "name": "hibernate",
+    "codepoint": "E023",
+    "source": "src/hibernate.svg"
+  }
+]

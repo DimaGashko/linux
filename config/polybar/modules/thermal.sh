@@ -4,13 +4,13 @@ profile=$(~/linux/sh/thermal/update-thermal.sh) || exit 1
 icon=""
 
 if [[ $profile == "Balanced" ]]; then
-   icon=""
+   icon=""
 elif [[ $profile == "Quiet" ]]; then
-   icon=""
+   icon=""
 elif [[ $profile == "Cool" ]]; then
-   icon=""
+   icon=""
 elif [[ $profile == "Performance" ]]; then
-   icon=""
+   icon=""
 fi
 
-printf '%s %s\n' "$icon" "$profile"
+printf '%%{T2}%s%%{T3} %s\n' "$icon" "$profile"

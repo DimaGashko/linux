@@ -19,8 +19,8 @@ TIMEOUT_SECONDS = 15
 NORMAL_POLL_SECONDS = 5 * 60
 FAST_POLL_SECONDS = 30
 FAST_MODE_DURATION_SECONDS = 20 * 60
-OPENAI_ICON = "%{T4}%{T5} "
-FAST_MODE_DOT = "%{O-8}%{F#b22222}%{T7}•%{T5}%{F-}"
+OPENAI_ICON = "%{T2}\ue001%{T3}"
+FAST_MODE_DOT = "%{O-18}%{F#b22222}%{T2}\ue002%{T3}%{F-}"
 CACHE_PATH = Path(
     os.environ.get("XDG_CACHE_HOME", str(Path.home() / ".cache"))
 ) / "polybar-codex-usage.json"
@@ -130,11 +130,50 @@ def selected_snapshot(payload):
     return buckets.get("codex") or payload.get("rateLimits") or {}
 
 
-def short_window(payload):
+def limit_windows(payload):
     snapshot = selected_snapshot(payload)
     windows = [window for window in (snapshot.get("primary"), snapshot.get("secondary")) if window]
     windows.sort(key=lambda window: window.get("windowDurationMins") or 0)
-    return windows[0] if windows else None
+
+    return windows
+
+
+def window_label(window):
+    minutes = window.get("windowDurationMins")
+
+    if not minutes:
+        return "Usage"
+
+    if minutes % (24 * 60) == 0:
+        return f"{minutes // (24 * 60)}d"
+
+    if minutes % 60 == 0:
+        return f"{minutes // 60}h"
+
+    return f"{minutes}m"
+
+
+def reset_countdown(window, now=None):
+    resets_at = window.get("resetsAt")
+
+    if resets_at is None:
+        return None
+
+    seconds = max(0, int(resets_at - (time.time() if now is None else now)))
+    days, remainder = divmod(seconds, 24 * 60 * 60)
+    hours, remainder = divmod(remainder, 60 * 60)
+    minutes = remainder // 60
+
+    if days:
+        return f"{days}d {hours}h"
+
+    if hours:
+        return f"{hours}h {minutes}m"
+
+    if seconds and not minutes:
+        return "<1m"
+
+    return f"{minutes}m"
 
 
 def remaining_percent(window):
@@ -142,12 +181,28 @@ def remaining_percent(window):
 
 
 def format_output(payload, stale=False, mode="default"):
-    short = short_window(payload)
+    windows = limit_windows(payload)
     parts = []
-    if short:
-        parts.append(f"%{{F#ffffff}}5h {remaining_percent(short)}%%{{F-}}")
+
+    for window in windows:
+        label = f"{window_label(window)} "
+
+        if len(windows) == 1 and window.get("windowDurationMins") == 7 * 24 * 60:
+            label = ""
+
+        parts.append(f"%{{F#ffffff}}{label}{remaining_percent(window)}%%{{F-}}")
+
+    weekly = next((window for window in windows if window.get("windowDurationMins") == 7 * 24 * 60), None)
+
+    if weekly is not None:
+        countdown = reset_countdown(weekly)
+
+        if countdown is not None:
+            parts.append(f"%{{F#ffffff}}{countdown}%{{F-}}")
+
     if not parts:
         return "Codex no limits"
+
     icon = OPENAI_ICON
 
     if mode == "fast":
@@ -239,6 +294,7 @@ def main():
     PID_PATH.write_text(str(os.getpid()))
     worker.start()
     next_poll_at = time.monotonic()
+    next_redraw_at = next_poll_at
     redraw = True
 
     try:
@@ -259,7 +315,7 @@ def main():
 
                 redraw = True
 
-            if redraw:
+            if redraw or now >= next_redraw_at:
                 output = (
                     format_output(last_payload, stale=stale, mode=mode)
                     if last_payload
@@ -267,13 +323,14 @@ def main():
                 )
                 print(output, flush=True)
                 redraw = False
+                next_redraw_at = now + 60
 
             if now >= next_poll_at:
                 refresh.set()
                 interval = FAST_POLL_SECONDS if mode == "fast" else NORMAL_POLL_SECONDS
                 next_poll_at = now + interval
 
-            deadline = next_poll_at
+            deadline = min(next_poll_at, next_redraw_at)
 
             if fast_mode_expires_at is not None:
                 deadline = min(deadline, fast_mode_expires_at)

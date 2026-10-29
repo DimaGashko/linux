@@ -2,12 +2,12 @@
 
 script_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
 
-options="Sleep\0icon\x1f<span color='#fff'></span>
-Hibernate\0icon\x1f<span color='#fff'></span>
-Power off\0icon\x1f<span color='#fff'></span>
-Reboot\0icon\x1f<span color='#fff'></span>
-Exit i3\0icon\x1f<span color='#fff'></span>
-Cancel\0icon\x1f<span color='#fff'>󱎘</span>"
+options="Sleep\0icon\x1f<span font_desc='Custom System Icons 18' color='#fff'></span>
+Hibernate\0icon\x1f<span font_desc='Custom System Icons 18' color='#fff'></span>
+Power off\0icon\x1f<span font_desc='Custom System Icons 18' color='#fff'></span>
+Reboot\0icon\x1f<span font_desc='Custom System Icons 18' color='#fff'></span>
+Exit i3\0icon\x1f<span font_desc='Custom System Icons 18' color='#fff'></span>
+Cancel\0icon\x1f<span font_desc='Custom System Icons 18' color='#fff'></span>"
 
 len=$(echo "$options" | wc -l)
 choice=$(echo -en "$options" | rofi -dmenu -p ">" -show-icons -i -l $len)

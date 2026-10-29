@@ -91,7 +91,8 @@ bindsym $mod+Ctrl+b $exec feh ~/linux/img/bg-images/* --bg-scale --randomize --n
 
 bindsym $mod+t $exec ~/linux/sh/thermal/set-themal.sh
 
-bindsym $mod+u $exec "setxkbmap -layout us,ua -model pc105 -option 'grp:win_space_toggle'"
-bindsym $mod+Shift+u $exec "setxkbmap -layout us,ru -model pc105 -option 'grp:win_space_toggle'"
+# Mod+Space is handled by the keyboard helper to preserve recent-layout order.
+bindsym $mod+u $exec ~/linux/sh/keyboard/layout-switcher.sh --select ua
+bindsym $mod+Shift+u $exec ~/linux/sh/keyboard/layout-switcher.sh --select ru
 
 

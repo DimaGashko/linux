@@ -5,10 +5,10 @@ set -eu
 profile_file=/sys/firmware/acpi/platform_profile
 choices_file=/sys/firmware/acpi/platform_profile_choices
 
-options="Balanced\0icon\x1f<span color='#fff'></span>
-Quiet\0icon\x1f<span color='#fff'></span>
-Cool\0icon\x1f<span color='#fff'></span>
-Performance\0icon\x1f<span color='#fff'></span>"
+options="Balanced\0icon\x1f<span font_desc='Custom System Icons 18' color='#fff'></span>
+Quiet\0icon\x1f<span font_desc='Custom System Icons 18' color='#fff'></span>
+Cool\0icon\x1f<span font_desc='Custom System Icons 18' color='#fff'></span>
+Performance\0icon\x1f<span font_desc='Custom System Icons 18' color='#fff'></span>"
 
 len=$(printf '%s\n' "$options" | wc -l)
 choice=$(printf '%b' "$options" | rofi -dmenu -p ">" -show-icons -i -l "$len")

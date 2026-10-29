@@ -16,4 +16,4 @@ if (($bat < 5)); then
    color="#f00"
 fi
 
-echo "%{F$color}%{T2} %{T-}%{T1}$bat%%{F-}%{T-}"
+echo "%{F$color}%{T2} %{T-}%{T1}$bat%%{F-}%{T-}"
