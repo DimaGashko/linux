@@ -46,6 +46,9 @@ alias galleryPreview='nsxiv -aft'
 
 alias moz_cjpg='/opt/mozjpeg/bin/cjpeg'
 
+alias stress='stress-ng --cpu 0 --timeout 600s'
+alias cpu='watch -n 1 "grep MHz /proc/cpuinfo"'
+
 alias mirrors_sync='sudo reflector -c UA,FR,DE,PL,CZ,EE,FI,IT,LT,LV --sort rate --latest 50 --threads 50 --protocol https --verbose --save /etc/pacman.d/mirrorlist'
 alias mirrors_sync2='sudo reflector --sort rate --latest 1000 --threads 50 --protocol https --verbose --save /etc/pacman.d/mirrorlist'
 

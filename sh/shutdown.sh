@@ -1,5 +1,7 @@
 #!/bin/bash
 
+script_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+
 options="Sleep\0icon\x1f<span color='#fff'></span>
 Hibernate\0icon\x1f<span color='#fff'></span>
 Power off\0icon\x1f<span color='#fff'></span>
@@ -12,8 +14,15 @@ choice=$(echo -en "$options" | rofi -dmenu -p ">" -show-icons -i -l $len)
 
 case $choice in
 "Sleep")
-   echo "Sleep"
-   systemctl suspend
+   if ! duration=$(rofi-in "Sleep in"); then
+      exit 0
+   fi
+
+   if [[ "$duration" == "-1" ]]; then
+      "$script_dir/sleep-timer.py" cancel
+   else
+      "$script_dir/sleep-timer.py" start "${duration:-0}"
+   fi
    ;;
 "Power off")
    if [[ $(confirm) != "YES" ]]; then

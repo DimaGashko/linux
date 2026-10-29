@@ -11,7 +11,7 @@ alacritty --working-directory ~/ssr &
 sleep $interval
 i3-msg "split v"
 
-alacritty --working-directory ~/ssr/frontend &
+alacritty --working-directory ~/ssr/frontend -e bash -c "yarn serve" &
 
 sleep $interval
 i3-msg "split v"

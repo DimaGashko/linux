@@ -1,20 +1,16 @@
 #!/bin/bash
 
-profile=$(cat /tmp/thermal-profile)
+profile=$(~/linux/sh/thermal/update-thermal.sh) || exit 1
 icon=""
 
 if [[ $profile == "Balanced" ]]; then
    icon=""
 elif [[ $profile == "Quiet" ]]; then
    icon=""
-elif [[ $profile == "Cool Bottom" ]]; then
+elif [[ $profile == "Cool" ]]; then
    icon=""
 elif [[ $profile == "Performance" ]]; then
    icon=""
 fi
 
-if [[ $profile == "Cool Bottom" ]]; then
-   profile="Cool"
-fi
-
-echo $icon $profile
+printf '%s %s\n' "$icon" "$profile"

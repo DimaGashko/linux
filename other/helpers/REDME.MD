@@ -40,3 +40,25 @@ while read FONT; do echo "$FONT"; echo "$FONT"; xfd -fa "$FONT" -rows 40 -column
 
 ---
 sudo pacman -Sy archlinux-keyring && sudo pacman -Suy
+
+
+----
+
+```sh
+xdg-mime query default image/png
+```
+
+
+Print power usage in watts, volts and amps and frequency
+```sh
+watch -n 1 "awk 'BEGIN {
+  getline v < \"/sys/class/power_supply/ucsi-source-psy-USBC000:001/voltage_now\"
+  getline a < \"/sys/class/power_supply/ucsi-source-psy-USBC000:001/current_now\"
+  printf \"%.1f W (%.1f V × %.1f A)\\n\", v*a/1e12, v/1e6, a/1e6
+}'"
+
+watch -n 1 "grep 'cpu MHz' /proc/cpuinfo"
+
+stress-ng --cpu 0 --timeout 600s
+```
+
