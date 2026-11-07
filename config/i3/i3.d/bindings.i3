@@ -1,5 +1,7 @@
 bindsym $mod+Shift+e $exec "~/linux/sh/shutdown.sh"
 
+bindsym --release $mod+Ctrl+s $exec xscreensaver-command --select 143
+
 bindsym $mod+Return $exec alacritty
 bindsym $mod+Shift+Return $exec "alacritty --class AlacrittyFloating"
 
@@ -75,7 +77,7 @@ bindsym Mod1+Right workspace next
 # bindsym $mod+Ctrl+Right move container to workspace next; workspace next
 
 bindsym Mod1+d $exec xrandr --output DP-4 --auto --right-of eDP-1
-bindsym Mod1+f $exec xrandr --output DP-3 --auto --left-of eDP-1
+bindsym Mod1+f exec xrandr --output DP-3 --mode 3840x2160 --rate 120.00 --left-of eDP-1
 bindsym Mod1+g $exec xrandr --output DP-3 --same-as eDP-1 --scale 1x1 --mode 1920x1200
 
 # bindsym Mod1+d $exec xrandr --output DP-4 --auto

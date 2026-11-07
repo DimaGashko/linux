@@ -1,18 +1,15 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-cd ~/config/i3
-exec 1>i3.config
+cd -- "$(dirname -- "${BASH_SOURCE[0]}")"
+temporary=$(mktemp .i3.config.XXXXXX)
+trap 'rm -f "$temporary"' EXIT
 
-wsGroup=$1
+for file in i3.d/*.i3; do
+    printf '# - - - %s - - -\n' "$file"
+    cat "$file"
+    printf '\n\n'
+done > "$temporary"
 
-if [ ! -z $wsGroup ]; then
-   sh/gen-ws-bindings.sh $wsGroup > i3.d/_workspaces.gen.i3
-   echo $(($wsGroup + 1)) > .active-ws-group
-fi
-
-for f in $(find i3.d/*)
-do
-   echo "# - - - - - - - - - - $f - - - - - - - - - -"
-   cat $f
-   echo -e "\n\n"
-done
+i3 -C -c "$temporary"
+mv -f "$temporary" i3.config
